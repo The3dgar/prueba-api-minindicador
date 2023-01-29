@@ -1,0 +1,32 @@
+/* eslint-disable prettier/prettier */
+export interface IndicatorsAPIResponse {
+  version:           string;
+  autor:             string;
+  fecha:             string;
+  uf:                Bitcoin;
+  ivp:               Bitcoin;
+  dolar:             Bitcoin;
+  dolar_intercambio: Bitcoin;
+  euro:              Bitcoin;
+  ipc:               Bitcoin;
+  utm:               Bitcoin;
+  imacec:            Bitcoin;
+  tpm:               Bitcoin;
+  libra_cobre:       Bitcoin;
+  tasa_desempleo:    Bitcoin;
+  bitcoin:           Bitcoin;
+}
+
+export interface Bitcoin {
+  codigo:        string;
+  nombre:        string;
+  unidad_medida: UnidadMedida;
+  fecha:         string;
+  valor:         number;
+}
+
+export enum UnidadMedida {
+  Dólar = "Dólar",
+  Pesos = "Pesos",
+  Porcentaje = "Porcentaje",
+}
